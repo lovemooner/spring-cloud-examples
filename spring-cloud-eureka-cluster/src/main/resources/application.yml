@@ -11,6 +11,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://peer2:8001/eureka/,http://peer3:8002/eureka/
+  server:
+      enable-self-preservation: false
 ---
 spring:
   application:
@@ -24,6 +26,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://peer1:8000/eureka/,http://peer3:8002/eureka/
+  server:
+    enable-self-preservation: false
 ---
 spring:
   application:
@@ -37,3 +41,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://peer1:8000/eureka/,http://peer2:8001/eureka/
+  server:
+    enable-self-preservation: false

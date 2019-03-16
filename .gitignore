@@ -1,6 +1,8 @@
 /target/*
+/*/target/*
 /servlet.iml
 /.idea/*
 /*.log
 /*.iml
 /*/*.iml
+/.DS_Store

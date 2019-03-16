@@ -1,21 +1,23 @@
 package com.neo.controller;
 
-import com.neo.remote.RemoteService;
+import com.neo.remote.HelloRemote;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ConsumerController {
 
     @Autowired
-    RemoteService remote;
+    HelloRemote remote;
 
     @RequestMapping("/hello/{name}")
     public String index(@PathVariable("name") String name) {
-        return remote.hello(name);
+
+        String str= remote.hello(name);
+        System.out.println(str);
+        return str;
     }
 
 }

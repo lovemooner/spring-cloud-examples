@@ -26,9 +26,9 @@
 	<modules>
 		<module>spring-cloud-consumer</module>
 		<module>spring-cloud-producer</module>
-		<module>spring-cloud-producer-2</module>
 		<module>spring-cloud-config-server</module>
 		<module>spring-cloud-eureka-cluster</module>
+		<module>spring-cloud-eureka</module>
 		<module>spring-cloud-zuul</module>
 
 	</modules>

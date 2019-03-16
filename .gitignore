@@ -1,0 +1,6 @@
+/target/*
+/servlet.iml
+/.idea/*
+/*.log
+/*.iml
+/*/*.iml

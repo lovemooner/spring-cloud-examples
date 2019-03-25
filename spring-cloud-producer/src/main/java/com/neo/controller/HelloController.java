@@ -14,6 +14,7 @@ public class HelloController {
     @RequestMapping("/hello")
     public String index(@RequestParam String name) {
         logger.info("[producer] request one  name is "+name);
+//        if(1==1) throw new RuntimeException("for test");
         return "hello "+name+"，this is first messge";
     }
 }

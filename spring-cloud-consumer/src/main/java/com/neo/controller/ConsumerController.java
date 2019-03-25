@@ -15,9 +15,14 @@ public class ConsumerController {
     @RequestMapping("/hello/{name}")
     public String index(@PathVariable("name") String name) {
 
-        String str= remote.hello(name);
-        System.out.println(str);
-        return str;
+//       try{
+           String str= remote.hello(name);
+           System.out.println(str);
+           return str;
+//       }catch (Exception e){
+//           e.printStackTrace();
+//       }
+//       return "falied";
     }
 
 }

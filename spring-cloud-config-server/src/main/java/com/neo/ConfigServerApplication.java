@@ -12,6 +12,8 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 public class ConfigServerApplication {
 
 	public static void main(String[] args) {
+		System.setProperty("https.proxyHost", "cn-proxy.jp.oracle.com");
+		System.setProperty("https.proxyPort", "80");
 		SpringApplication.run(ConfigServerApplication.class, args);
 	}
 }

@@ -24,7 +24,7 @@ public class TokenFilter extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
-        return true;// 是否执行该过滤器，此处为true，说明需要过滤
+        return false;// 是否执行该过滤器，此处为true，说明需要过滤
     }
 
     @Override
@@ -35,7 +35,7 @@ public class TokenFilter extends ZuulFilter {
         logger.info("--->>> TokenFilter {},{}", request.getMethod(), request.getRequestURL().toString());
 
         String token = request.getParameter("token");// 获取请求的参数
-        token="test";
+//        token="test";
         if (StringUtils.isNotBlank(token)) {
             ctx.setSendZuulResponse(true); //对请求进行路由
             ctx.setResponseStatusCode(200);

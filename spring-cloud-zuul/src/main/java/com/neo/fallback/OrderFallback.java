@@ -31,7 +31,7 @@ public class OrderFallback implements FallbackProvider {
     public ClientHttpResponse fallbackResponse(Throwable cause) {
         if (cause != null && cause.getCause() != null) {
             String reason = cause.getCause().getMessage();
-            logger.info("Excption {}",reason);
+            logger.error("Excption {}",reason);
         }
         return fallbackResponse();
     }

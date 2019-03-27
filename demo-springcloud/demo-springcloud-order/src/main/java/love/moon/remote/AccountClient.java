@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(name= "spring-cloud-account",fallback = HelloRemoteHystrix.class)
+//@FeignClient(name= "spring-cloud-account")
 public interface AccountClient {
 
     @RequestMapping(value = "/hello")

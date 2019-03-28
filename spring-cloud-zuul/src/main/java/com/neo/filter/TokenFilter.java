@@ -35,7 +35,7 @@ public class TokenFilter extends ZuulFilter {
         logger.info("--->>> TokenFilter {},{}", request.getMethod(), request.getRequestURL().toString());
 
         String token = request.getParameter("token");// 获取请求的参数
-//        token="test";
+        token="test";
         if (StringUtils.isNotBlank(token)) {
             ctx.setSendZuulResponse(true); //对请求进行路由
             ctx.setResponseStatusCode(200);

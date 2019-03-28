@@ -30,8 +30,9 @@
 		<module>spring-cloud-zuul</module>
 		<module>demo-springcloud</module>
 		<module>zipkin-server</module>
+        <module>spring-boot-admin-server</module>
 
-	</modules>
+    </modules>
 
 
 	

@@ -7,23 +7,13 @@
         <groupId>com.neo</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-
-    <name>demo-springcloud</name>
-    <description>demo</description>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>demo-springcloud</artifactId>
+    <artifactId>gateway</artifactId>
     <packaging>pom</packaging>
-
-
     <modules>
-        <module>demo-springcloud-order</module>
-        <module>demo-springcloud-account</module>
-        <module>spring-cloud-eureka-cluster</module>
-        <module>spring-cloud-eureka</module>
-        <module>inventory</module>
-        <module>util</module>
+        <module>spring-cloud-zuul</module>
+        <module>spring-cloud-gateway</module>
     </modules>
-
 
 </project>

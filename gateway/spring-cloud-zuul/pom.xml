@@ -9,7 +9,7 @@
 
 	<parent>
 		<groupId>com.neo</groupId>
-		<artifactId>spring-cloud-examples</artifactId>
+		<artifactId>gateway</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 

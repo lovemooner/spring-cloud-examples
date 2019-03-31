@@ -6,7 +6,6 @@
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>ERROR</level>
         </filter>
-        <!--<encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder" />-->
         <!-- 日志输出编码 -->
         <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
             <providers>
@@ -38,4 +37,6 @@
         <appender-ref ref="LOGSTASH" />
         <appender-ref ref="CONSOLE" />
     </root>
+
+
 </configuration>

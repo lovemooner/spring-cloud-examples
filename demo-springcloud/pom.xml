@@ -19,6 +19,8 @@
         <module>demo-springcloud-account</module>
         <module>spring-cloud-eureka-cluster</module>
         <module>spring-cloud-eureka</module>
+        <module>inventory</module>
+        <module>util</module>
     </modules>
 
 

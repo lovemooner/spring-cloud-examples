@@ -5,10 +5,10 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Component;
 
 @Component
-//@RefreshScope
+@RefreshScope
 public class OrderConfig {
 
-//    @Value("${neo.hello}")
+    @Value("${neo.hello}")
     private String hello;
 
     public String getHello() {

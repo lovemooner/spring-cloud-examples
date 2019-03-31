@@ -10,7 +10,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-//@EnableFeignClients
+@EnableFeignClients
 public class OrderApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
@@ -22,9 +22,9 @@ public class OrderApplication implements CommandLineRunner {
 		Logger logger = LoggerFactory.getLogger(OrderApplication.class);
 		logger.info("测试log");
 
-		for (int i = 0; i < 10; i++) {
-			logger.error("something wrong. id={}; name=Ryan-{};", i, i);
-		}
+//		for (int i = 0; i < 10; i++) {
+//			logger.error("something wrong. id={}; name=Ryan-{};", i, i);
+//		}
 	}
 
 }

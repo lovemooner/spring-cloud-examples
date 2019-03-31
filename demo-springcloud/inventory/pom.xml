@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>demo-springcloud-account</artifactId>
-
+    <artifactId>inventory</artifactId>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -19,43 +18,26 @@
     </properties>
 
     <dependencies>
-        <!--eureka-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
         <!--spring boot admin-->
         <!--<dependency>-->
-            <!--<groupId>de.codecentric</groupId>-->
-            <!--<artifactId>spring-boot-admin-starter-client</artifactId>-->
-            <!--<version>2.1.0</version>-->
+        <!--<groupId>de.codecentric</groupId>-->
+        <!--<artifactId>spring-boot-admin-starter-client</artifactId>-->
+        <!--<version>2.1.0</version>-->
         <!--</dependency>-->
         <!--actuator-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <!--feign-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-feign</artifactId>
-        </dependency>
+
         <!--zipkin client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zipkin</artifactId>
-        </dependency>
-        <!--ELK log handler-->
-        <dependency>
-            <groupId>net.logstash.logback</groupId>
-            <artifactId>logstash-logback-encoder</artifactId>
-            <version>5.1</version>
-        </dependency>
-        <!--ELK log handler-->
-        <dependency>
-            <groupId>com.neo</groupId>
-            <artifactId>spring-cloud-util</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <!--test-->
         <dependency>
@@ -90,4 +72,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

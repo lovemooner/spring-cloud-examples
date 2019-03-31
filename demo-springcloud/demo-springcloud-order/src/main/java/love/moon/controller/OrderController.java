@@ -1,7 +1,9 @@
 package love.moon.controller;
 
 import love.moon.config.OrderConfig;
+import love.moon.pojo.ServerException;
 import love.moon.remote.AccountClient;
+import love.moon.remote.InventoryClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,33 +17,30 @@ public class OrderController {
     Logger logger = LoggerFactory.getLogger(OrderController.class);
 
     @Autowired
-    AccountClient remote;
-
+    AccountClient accountClient;
+    @Autowired
+    InventoryClient inventoryClient;
     @Autowired
     OrderConfig config;
 
-    @RequestMapping("/hello/{name}")
-    public String saveOrder(@PathVariable("name") String name) {
+    @RequestMapping("/list/{name}")
+    public String list(@PathVariable("name") String name) {
         logger.info("saveOrder1==");
-        logger.info("saveOrder2==");
-
         try {
-//           String str= remote.hello(name);
-//           System.out.println(str);
-//           return str;
-            if (1 == 1) {
-                throw new NullPointerException("my Exception=====");
-            }
-            return "from-order";
-
+           return accountClient.pay(name);
         } catch (Exception e) {
-            logger.error(e.getMessage(), e);
+            ServerException exception=new ServerException(e.getMessage(),e);
+            logger.error(exception.getStack(), exception);
             return "falied";
 
         }
     }
 
-    @GetMapping("/getConfig")
+    /**
+     * test config server
+     * @return
+     */
+    @GetMapping("/config")
     public String getConfig() {
         return config.getHello();
     }

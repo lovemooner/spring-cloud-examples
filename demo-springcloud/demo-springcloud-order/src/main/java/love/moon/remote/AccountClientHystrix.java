@@ -4,10 +4,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Component
-public class HelloRemoteHystrix implements AccountClient{
+public class AccountClientHystrix implements AccountClient{
 
     @Override
-    public String hello(@RequestParam(value = "name") String name) {
-        return "send failed ";
+    public String pay(@RequestParam(value = "name") String name) {
+        return "Hystrix:send failed ";
     }
 }

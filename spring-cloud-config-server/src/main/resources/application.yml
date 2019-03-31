@@ -11,6 +11,7 @@ spring:
           search-paths: config-repo                                     # git仓库地址下的相对地址，可以配置多个，用,分割。
           username: lovemooner                                          # git仓库的账号
           password: ccx3801=                                            # git仓库的密码
+          force-pull: true
 #  rabbitmq:
 #    host: slc11fsp.us.oracle.com
 #    port: 5672

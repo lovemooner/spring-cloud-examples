@@ -24,7 +24,7 @@ eureka:
       defaultZone: http://slc11fsp.us.oracle.com:8000/eureka/   ## 注册中心eurka地址
 
 
-#management:
-#  security:
-#     enabled: false
+management:
+  security:
+     enabled: false
 
